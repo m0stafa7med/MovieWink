@@ -17,6 +17,7 @@ class MoviesController extends Controller
         $popularMovies =Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OWU4NzI5MjdlMjU4MzNkNDViZTRmMWE2ZjU0N2MzMCIsInN1YiI6IjVmM2IxNTY3OGFjM2QwMDAzNTFhYmI1MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bHig4yaMYxLOyu14KRavwKnRSg_R6-k5r55PHAk8tng','bearer')
          ->get('https://api.themoviedb.org/3/movie/popular')
          ->json()['results'];
+        //  dd($popularMovies);
 
          $genresArray = Http::withToken('eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OWU4NzI5MjdlMjU4MzNkNDViZTRmMWE2ZjU0N2MzMCIsInN1YiI6IjVmM2IxNTY3OGFjM2QwMDAzNTFhYmI1MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bHig4yaMYxLOyu14KRavwKnRSg_R6-k5r55PHAk8tng','bearer')
          ->get('https://api.themoviedb.org/3/genre/movie/list')
