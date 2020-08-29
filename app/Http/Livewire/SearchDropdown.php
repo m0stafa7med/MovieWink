@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 class SearchDropdown extends Component
 {
-    public $search="hello there";
+    public $search="";
 
     public function render()
     {
@@ -19,7 +19,7 @@ class SearchDropdown extends Component
         //  dump($searchResults);
         
         return view('livewire.search-dropdown',[
-            'searchResults'=>$searchResults,
+            'searchResults'=>collect( $searchResults)->take(7),
         ]);
     }
 }
